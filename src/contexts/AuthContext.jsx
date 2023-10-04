@@ -29,11 +29,12 @@ function AuthProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { user, isAuthenticated } = state;
 
-  function login(email, password) {
+async function login(email, password) {
+    console.log(email , password)
     if (email === FAKE_USER.email && password === FAKE_USER.password) {
       dispatch({ type: "login", payload: { email, password } });
     } else {
-      throw new Error("Incorrect username or password");
+      alert("Incorrect username or password");
     }
   }
 
