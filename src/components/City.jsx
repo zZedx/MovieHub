@@ -1,10 +1,12 @@
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import {useLayoutEffect} from "react";
+
 import { useCities } from "../contexts/CitiesContext";
 import styles from "./City.module.css";
 import Button from "./Button";
 import Spinner from "./Spinner";
+import FlagEmoji from "./FlagEmoji";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -13,15 +15,6 @@ const formatDate = (date) =>
     year: "numeric",
     weekday: "long",
   }).format(new Date(date));
-
-const flagemojiToPNG = (flag) => {
-  var countryCode = Array.from(flag, (codeUnit) => codeUnit.codePointAt())
-    .map((char) => String.fromCharCode(char - 127397).toLowerCase())
-    .join("");
-  return (
-    <img src={`https://flagcdn.com/24x18/${countryCode}.png`} alt="flag" />
-  );
-};
 
 function City() {
   const { id } = useParams();
@@ -46,7 +39,7 @@ const { cityName, emoji, date, notes } = currentCity;
       <div className={styles.row}>
         <h6>{cityName}</h6>
         <h3>
-          <span>{emoji ? flagemojiToPNG(emoji) : ""}</span> {cityName}
+          <span>{emoji ? <FlagEmoji>{emoji}</FlagEmoji> : ""}</span> {cityName}
         </h3>
       </div>
 
