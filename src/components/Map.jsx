@@ -35,9 +35,9 @@ const Map = () => {
   useEffect(() => {
     if (geoLocationPosition) {
       setMapPosition(geoLocationPosition);
-      // navigate(
-      //   `form?lat=${geoLocationPosition.lat}&lng=${geoLocationPosition.lng}`
-      // );
+      navigate(
+        `form?lat=${geoLocationPosition.lat}&lng=${geoLocationPosition.lng}`
+      );
     }
   }, [geoLocationPosition]);
 

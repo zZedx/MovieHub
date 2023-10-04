@@ -1,18 +1,6 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 739354385
-    },
-    {
       "cityName": "Madrid",
       "country": "Spain",
       "emoji": "🇪🇸",
@@ -23,18 +11,6 @@
         "lng": -3.7133789062500004
       },
       "id": 178066751
-    },
-    {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 984783197
     },
     {
       "cityName": "Paris",
@@ -49,18 +25,6 @@
       "id": 73930385
     },
     {
-      "cityName": "London",
-      "country": "United Kingdom",
-      "emoji": "🇬🇧",
-      "date": "2026-10-31T15:59:59.138Z",
-      "notes": "",
-      "position": {
-        "lat": 51.5073219,
-        "lng": -0.1276474
-      },
-      "id": 73935385
-    },
-    {
       "cityName": "New York",
       "country": "United States",
       "emoji": "🇺🇸",
@@ -73,16 +37,40 @@
       "id": 17806751
     },
     {
-      "cityName": "Tokyo",
-      "country": "Japan",
-      "emoji": "🇯🇵",
-      "date": "2026-02-12T09:24:11.863Z",
+      "cityName": "Feucherolles",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2023-10-04T11:50:19.343Z",
       "notes": "",
       "position": {
-        "lat": 35.6894875,
-        "lng": 139.6917064
+        "lat": "48.87736082887192",
+        "lng": "1.9638061523437502"
       },
-      "id": 98443197
+      "id": 178066752
+    },
+    {
+      "cityName": "Chittaurgarh",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2023-10-04T11:51:03.355Z",
+      "notes": "",
+      "position": {
+        "lat": "24.8802817",
+        "lng": "74.6274068"
+      },
+      "id": 178066754
+    },
+    {
+      "cityName": "Nasirabad",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2023-10-04T11:52:49.882Z",
+      "notes": "",
+      "position": {
+        "lat": "26.455820238459893",
+        "lng": "74.75646972656251"
+      },
+      "id": 178066758
     }
   ]
 }
