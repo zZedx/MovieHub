@@ -26,7 +26,7 @@ function City() {
       getCurrentCity(id);
     }
     fetchCity();
-  }, [id]);
+  }, [id , getCurrentCity]);
 
 const { cityName, emoji, date, notes } = currentCity;
 

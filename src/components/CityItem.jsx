@@ -1,5 +1,5 @@
 import styles from "./CityItem.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { useCities } from "../contexts/CitiesContext";
 import FlagEmoji from "./FlagEmoji";
 
@@ -12,7 +12,6 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 const CityItem = ({ city }) => {
-  const navigate = useNavigate()
   const { currentCity , handleDeleteCity} = useCities();
   const { cityName, emoji, date, id, position } = city;
 

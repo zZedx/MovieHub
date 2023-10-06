@@ -1,6 +1,8 @@
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
-import { Navigate } from "react-router-dom";
-import { AuthProvider, useAuth } from "./contexts/AuthContext";
+import { BrowserRouter, Routes, Route ,Navigate} from "react-router-dom";
+
+import { AuthProvider} from "./contexts/AuthContext";
+import ProctedRoutes from "./pages/ProctedRoutes";
+import { CitiesProvider } from "./contexts/CitiesContext";
 
 import Product from "./pages/Product";
 import Pricing from "./pages/Pricing";
@@ -8,13 +10,12 @@ import Homepage from "./pages/Homepage";
 import PageNotFound from "./pages/PageNotFound";
 import Login from "./pages/Login";
 import AppLayout from "./pages/AppLayout";
+
 import CityList from "./components/CityList";
 import CountryList from "./components/CountryList";
 import City from "./components/City";
 import Form from "./components/Form";
-import ProctedRoutes from "./pages/ProctedRoutes";
 
-import { CitiesProvider } from "./contexts/CitiesContext";
 
 const App = () => {
   return (

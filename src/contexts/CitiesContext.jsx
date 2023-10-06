@@ -1,9 +1,9 @@
 import {
   createContext,
-  useState,
   useEffect,
   useContext,
   useReducer,
+  useCallback,
 } from "react";
 
 const URL = "http://localhost:3001";
@@ -63,7 +63,7 @@ function CitiesProvider({ children }) {
     fetchCities();
   }, []);
 
-  async function getCurrentCity(id) {
+  const getCurrentCity = useCallback( async function getCurrentCity(id) {
     if(Number(id) === currentCity.id) return
     dispatch({ type: "setLoadingTrue" });
     try {
@@ -75,7 +75,7 @@ function CitiesProvider({ children }) {
     } finally {
       dispatch({ type: "setLoadingFalse" });
     }
-  }
+  },[currentCity.id])
 
   async function handleAddCity(city) {
     dispatch({ type: "setLoadingTrue" });
@@ -90,7 +90,7 @@ function CitiesProvider({ children }) {
       const data = await response.json();
       dispatch({ type: "addCity", payload: data });
     } catch (error) {
-      alery("There was an Error adding the city");
+      alert("There was an Error adding the city");
     } finally {
       dispatch({ type: "setLoadingFalse" });
     }
